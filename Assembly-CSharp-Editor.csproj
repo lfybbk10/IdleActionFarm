@@ -700,8 +700,14 @@
  <Reference Include="UnityEditor.TestRunner">
  <HintPath>F:/UnityProjects/IdleActionFarm/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
+ <Reference Include="Cinemachine">
+ <HintPath>F:/UnityProjects/IdleActionFarm/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>F:/UnityProjects/IdleActionFarm/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>F:/UnityProjects/IdleActionFarm/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>F:/UnityProjects/IdleActionFarm/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -729,12 +735,6 @@
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>F:/UnityProjects/IdleActionFarm/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.cinemachine.editor">
- <HintPath>F:/UnityProjects/IdleActionFarm/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
- </Reference>
- <Reference Include="Cinemachine">
- <HintPath>F:/UnityProjects/IdleActionFarm/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
