@@ -23,6 +23,10 @@ public class CharacterMoveController : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            _animator.SetTrigger("AttackTrigger");
+        }
         if (_joystick.Direction != Vector2.zero)
         {
             _animator.SetBool("IsRunning",true);
