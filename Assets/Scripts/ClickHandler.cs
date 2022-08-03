@@ -32,7 +32,12 @@ public class ClickHandler : MonoBehaviour
             {
                 if (raycastHit.collider.gameObject.GetComponent<Wheat>() && (raycastHit.point-transform.position).magnitude <= _distToHit)
                 {
-                    transform.DOLookAt(raycastHit.transform.position, 0,AxisConstraint.Y).OnComplete(()=>_animator.SetTrigger("AttackTrigger"));
+                    Sequence sequence = DOTween.Sequence();
+                    sequence.Append(transform.DOLookAt(raycastHit.transform.position, 0, AxisConstraint.Y)
+                            .OnComplete(() => _animator.SetTrigger("AttackTrigger")))
+                        .Append(transform.DOLookAt(raycastHit.transform.position, 0, AxisConstraint.Y));
+                    sequence.Kill(true);
+
                 }
             }
             

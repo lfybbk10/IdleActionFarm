@@ -100,7 +100,7 @@ namespace EzySlice {
             // to make things straightforward, exit without slicing if the materials and mesh
             // array don't match. This shouldn't happen anyway
             if (materials.Length != submeshCount) {
-                Debug.LogWarning("EzySlice::Slice -> Provided Material array must match the length of submeshes.");
+                Debug.LogWarning("EzySlice::Slice -> Provided Material array must match the length of submeshes."+materials.Length+" "+submeshCount);
 
                 return null;
             }
