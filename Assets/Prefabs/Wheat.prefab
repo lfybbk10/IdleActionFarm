@@ -94,3 +94,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c59dfa02ed2c5304ea365d345b7373b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _blockOfWheatPrefab: {fileID: 2694706589117539529, guid: 4108bb9d65c24ea479371a9c35fe9c1a, type: 3}
