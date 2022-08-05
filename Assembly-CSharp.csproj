@@ -122,10 +122,11 @@
      <Compile Include="Assets\PostProcessing\Runtime\Models\DepthOfFieldModel.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Components\AmbientOcclusionComponent.cs" />
+     <Compile Include="Assets\Scripts\WiggleBlockStack.cs" />
      <Compile Include="Assets\EzySlice\Framework\TextureRegion.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Models\DitheringModel.cs" />
-     <Compile Include="Assets\Scripts\WiggleBlockStack.cs" />
+     <Compile Include="Assets\Scripts\SellTrigger.cs" />
      <None Include="Assets\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\GrainGen.shader" />
      <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />

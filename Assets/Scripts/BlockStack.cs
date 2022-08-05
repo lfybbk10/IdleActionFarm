@@ -13,6 +13,8 @@ public class BlockStack : MonoBehaviour
 
     [SerializeField] private float _offsetBlocks;
 
+    public bool IsSelling;
+
     private void Awake()
     {
         _blocks = new List<BlockOfWheat>();
@@ -57,6 +59,23 @@ public class BlockStack : MonoBehaviour
                 block.transform.DOLocalMove(new Vector3(0, (heightBlock + _offsetBlocks) * _blocks.Count), 0.5f))
             .Append(block.transform.DOLocalRotate(Vector3.zero, 0.2f)).OnComplete(()=> sequence.Kill());
     }
+
+    public IEnumerator SellBlocks(Vector3 sellBlockPos)
+    {
+        for (int i = _blocks.Count-1; i >= 0; i--)
+        {
+            var block = _blocks[i];
+            if(!IsSelling)
+                yield break;
+            
+            _blocks.RemoveAt(i);
+            block.transform.parent = null;
+            block.transform.DOMove(sellBlockPos, 1).OnComplete((() => Destroy(block.gameObject,0.1f)));
+            yield return new WaitForSeconds(2.5f);
+        }
+    }
+    
+    
 
     public int GetStackCount()
     {

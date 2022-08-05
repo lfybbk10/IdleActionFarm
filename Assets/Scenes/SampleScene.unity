@@ -2053,6 +2053,36 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: b858a018a7cd4ab49bb2938409b10caf, type: 3}
+--- !u!1 &571933347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 571933348}
+  m_Layer: 0
+  m_Name: SellBlockPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &571933348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571933347}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.403, y: 0, z: -0.15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2029294856}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &594678607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2368,6 +2398,21 @@ MonoBehaviour:
     m_Bits: 128
   _maxBlocks: 5
   _offsetBlocks: 0.1
+  IsSelling: 0
+--- !u!64 &632215905
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632215896}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1001 &658886911
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5692,6 +5737,64 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: c0817bd15bc1ebd49b43c48fcc5d1425, type: 3}
+--- !u!1 &1658907555
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1658907556}
+  - component: {fileID: 1658907558}
+  - component: {fileID: 1658907557}
+  m_Layer: 0
+  m_Name: SellTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1658907556
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658907555}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.439, y: 0.199, z: 1.847}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2029294856}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1658907557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658907555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 797449a6a6acf3c45a7847733d439442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sellBlockPos: {fileID: 571933348}
+--- !u!135 &1658907558
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658907555}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.19
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1682076966 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: b858a018a7cd4ab49bb2938409b10caf, type: 3}
@@ -7205,6 +7308,11 @@ Transform:
 --- !u!1 &2029294853 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: cc8593903f0a1394a857e76f66ee7836, type: 3}
+  m_PrefabInstance: {fileID: 1811634024}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2029294856 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: cc8593903f0a1394a857e76f66ee7836, type: 3}
   m_PrefabInstance: {fileID: 1811634024}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &2029294857
