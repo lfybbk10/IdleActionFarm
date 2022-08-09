@@ -8,27 +8,40 @@ public class Wheat : MonoBehaviour
     [SerializeField] private GameObject _blockOfWheatPrefab;
     
     private GameObject[] _partsOfWheat;
+    
     private MeshCollider _meshCollider;
     private MeshRenderer _meshRenderer;
     private Material _material;
+    
     private float _height;
-
+    
     private float _scytheAnimTimer;
     private float _animEps = 0.2f;
 
+    [SerializeField] private float _growInterval;
     private float _growTimer;
-    private float _growInterval = 10;
+    
+    
+    private FirstClickHandler _firstClickHandler;
 
     private void Awake()
     {
         _partsOfWheat = new GameObject[3];
+        
         _meshRenderer = GetComponent<MeshRenderer>();
         _material = _meshRenderer.material;
         _meshCollider = GetComponent<MeshCollider>();
+        _firstClickHandler = GetComponent<FirstClickHandler>();
+        
         _height = _meshCollider.bounds.max.y - _meshCollider.bounds.min.y;
     }
 
     private void Start()
+    {
+        Slice();
+    }
+
+    private void Slice()
     {
         Material[] materials = {_material, _material};
         
@@ -93,6 +106,7 @@ public class Wheat : MonoBehaviour
                 {
                     if (_partsOfWheat[i].activeSelf)
                     {
+                        
                         _partsOfWheat[i].SetActive(false);
                         Invoke(nameof(SpawnBlockOfWheat),0.1f);
                         _growTimer = 0;
@@ -101,6 +115,9 @@ public class Wheat : MonoBehaviour
                         {
                             _meshCollider.enabled = false;
                         }
+                        
+                        if(_firstClickHandler!=null && !_firstClickHandler.isCursorDeleted)
+                            _firstClickHandler.DeleteCursor();
                         break;
                     }
                 }

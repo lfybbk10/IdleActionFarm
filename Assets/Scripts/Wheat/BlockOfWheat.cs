@@ -12,13 +12,11 @@ public class BlockOfWheat : MonoBehaviour
     
     [HideInInspector] public Rigidbody rigidbody;
     
-    private float _xOffset = 0.6f;
-    private float _yOffset = 0.6f;
+    [SerializeField] private float _xOffset;
+    [SerializeField] private float _yOffset;
 
     [SerializeField] private float _destroyTime;
     private float _destroyTimer;
-
-    private float _wiggleOffset = 0.03f;
 
 
     private void Awake()

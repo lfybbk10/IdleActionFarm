@@ -111,6 +111,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
+  _xOffset: 0.6
+  _yOffset: 0.6
   _destroyTime: 15
 --- !u!54 &2694706589117539535
 Rigidbody:
