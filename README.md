@@ -1,5 +1,9 @@
 # IdleActionFarm
 
 
-https://user-images.githubusercontent.com/63192458/190436101-771a323a-4a8e-44ec-999e-c24d707bf506.mp4
+
+
+https://user-images.githubusercontent.com/63192458/190441998-577ae15b-96ec-42c6-a14f-6ba30a996901.mp4
+
+
 
